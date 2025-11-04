@@ -25,7 +25,7 @@
       overflow: hidden;
     }
 
-    /* Background video covers full screen, muted, looped */
+    
     .video-bg {
       position: fixed;
       inset: 0;
@@ -35,7 +35,7 @@
       z-index: 0;
     }
 
-    /* Subtle dark overlay to improve contrast */
+    
     .overlay {
       position: fixed;
       inset: 0;
@@ -44,7 +44,7 @@
       pointer-events: none;
     }
 
-    /* Centered layout */
+    
     .center {
       position: relative;
       min-height: 100dvh;
@@ -52,13 +52,13 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 12px; /* başlık ve butonları biraz daha yaklaştır */
+      gap: 12px; 
       padding: 24px;
       text-align: center;
       z-index: 2;
     }
 
-    /* Başlık için nazik partikül katmanı */
+    
     .title-wrap {
       position: relative;
       display: inline-block;
@@ -70,7 +70,7 @@
       z-index: 1;
     }
 
-    /* Glass kart (guns.lol esintisi, sade) */
+    
     .glass-card {
       background: rgba(0,0,0,0.22);
       border: 1px solid rgba(255,255,255,0.08);
@@ -82,7 +82,7 @@
       width: min(720px, 92vw);
     }
 
-    /* Title */
+    
     .title {
       font-family: 'Orbitron', 'Poppins', sans-serif;
       font-weight: 800;
@@ -100,8 +100,8 @@
       will-change: transform, text-shadow;
     }
     .title:hover {
-      transform: none; /* büyüme iptal */
-      animation: softGlow 1.2s ease-in-out infinite alternate; /* parlama dursun */
+      transform: none; 
+      animation: softGlow 1.2s ease-in-out infinite alternate; 
     }
     @keyframes softGlow {
       0% {
@@ -111,10 +111,10 @@
         text-shadow: 0 2px 6px rgba(0,0,0,0.6), 0 0 14px rgba(255,255,255,0.7), 0 0 26px rgba(255,255,255,0.45);
       }
     }
-    /* Avoid transform conflict: make title fade-in opacity-only */
+    
     .title.fade-in { animation: fadeInOpacity .6s ease both; }
 
-    /* Ses kontrolü (sol üst) */
+    
     .audio-control {
       position: fixed;
       top: 16px;
@@ -206,14 +206,14 @@
       transition: left .15s ease, background .3s ease;
     }
 
-    /* Social buttons area */
+   
     ul { list-style: none; padding: 0; margin: 0; }
     .example-2 {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 16px;
-      margin-top: 36px; /* başlık ile çakışmayı engellemek için aşağı al */
+      margin-top: 36px; 
     }
     .example-2 .icon-content { margin: 0 4px; position: relative; }
     .example-2 .icon-content .tooltip {
@@ -229,7 +229,7 @@
       font-size: 14px;
       transition: all 0.3s ease;
       white-space: nowrap;
-      z-index: 1; /* kartın altında kalsın */
+      z-index: 1; 
     }
     .example-2 .icon-content:hover .tooltip { opacity: 1; visibility: visible; top: -50px; }
     .example-2 .icon-content a {
@@ -238,7 +238,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 62px; /* a little bigger */
+      width: 62px; 
       height: 62px;
       border-radius: 50%;
       color: #4d4d4d;
@@ -266,12 +266,10 @@
     .example-2 .icon-content a[data-social="youtube"] .filled,
     .example-2 .icon-content a[data-social="youtube"] ~ .tooltip { background-color: #ff0000; }
 
-    /* Popover and custom profiles styles removed */
-
-    /* Subtle entry animation */
+    
     .fade-in { animation: fadeInUp .6s ease both; }
     @keyframes fadeInOpacity { from { opacity: 0; } to { opacity: 1; } }
-    /* Toast */
+    
     .toast {
       position: fixed;
       left: 50%;
@@ -305,28 +303,28 @@
     .fade-in.delay-3 { animation-delay: .3s; }
     @keyframes fadeInUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
-    /* Spotify kartı (Uiverse.io by csozidev) – stil kapsamı için isimlendirme yapıldı */
+    
     .spotify-card {
       position: relative;
-      width: clamp(300px, var(--title-width, 520px), 90vw); /* Troxway genişliğiyle eşleştir */
-      height: 136px; /* daha dengeli yükseklik */
+      width: clamp(300px, var(--title-width, 520px), 90vw); 
+      height: 136px; 
       background: #191414;
       border-radius: 14px;
       padding: 14px 16px;
-      margin-top: 16px; /* butonlardan sonra boşluk */
-      z-index: 2; /* tooltiplerin üstünde */
+      margin-top: 16px; 
+      z-index: 2; 
     }
     .spotify-card .top {
       position: relative;
       width: 100%;
-      min-height: 56px; /* logo yüksekliği kadar alan ayır */
+      min-height: 56px; 
       display: flex;
       align-items: center;
       gap: 10px;
-      justify-content: center; /* metinleri ortada tut */
+      justify-content: center; 
     }
     .spotify-card .pfp {
-      position: absolute; /* logoyu sola sabitle */
+      position: absolute; 
       top: 6px;
       left: 12px;
       height: 48px;
@@ -352,11 +350,11 @@
     }
     .spotify-card .title-1 {
       color: white;
-      font-size: 22px; /* biraz daha büyük */
+      font-size: 22px; 
       font-weight: 800;
       line-height: 1.15;
       margin: 2px 0 0 0;
-      white-space: nowrap; /* satır kırılmasın */
+      white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       letter-spacing: .2px;
@@ -443,10 +441,10 @@
   </video>
   <div class="overlay"></div>
 
-  <!-- Audio element (dosya adını kendi şarkı dosyana göre değiştir) -->
+  
   <audio id="bg-audio" preload="auto" src="music.mp3"></audio>
 
-  <!-- Sol üst ses kontrolü -->
+  
   <div class="audio-control" id="audioControl" title="Sesi aç/kapat ve ayarla">
     <button class="audio-btn" id="audioToggle" aria-label="Sesi Aç/Kapat" type="button">
       <svg class="audio-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -467,7 +465,7 @@
         <h1 class="title" style="margin:0;">Troxway</h1>
         <canvas class="title-particles" id="titleParticles"></canvas>
       </div>
-      <!-- Spotify kartı ortada (başlık ile butonların arasında) -->
+      
       <div class="spotify-card fade-in delay-1" aria-label="Şu an çalan: İHTİYAÇ YOK OTELE - ERAY067, Mansur" style="margin: 8px auto 12px auto;">
         <div class="top">
           <a class="pfp" href="https://open.spotify.com/intl-tr/track/1pwgLmoW8nB0kunWcOgiws?si=04968894d9d143a2" target="_blank" rel="noopener noreferrer" aria-label="Spotify'da aç">
@@ -519,7 +517,7 @@
       
         
 
-      <!-- Butonlar üçüncü sırada -->
+    
       <ul class="example-2 fade-in delay-2" style="margin-top: 14px;">
       <li class="icon-content">
         <a href="https://discord.com/" aria-label="Discord" data-social="discord" target="_blank" rel="noopener noreferrer">
@@ -555,7 +553,7 @@
     </div>
   </main>
   <script>
-    // Kart genişliğini başlık genişliği ile eşitle
+   
     (function syncSpotifyCardWidth(){
       const title = document.querySelector('.title');
       const card = document.querySelector('.spotify-card');
@@ -571,7 +569,7 @@
       apply();
     })();
 
-    // Troxway başlığı için nazik partikül efekti
+  
     (function titleParticles(){
       const canvas = document.getElementById('titleParticles');
       const title = document.querySelector('.title-wrap');
@@ -625,7 +623,7 @@
   </script>
 
   <script>
-    // Ensure background keeps playing in some mobile browsers
+   
     (function ensureVideoPlays(){
       const v = document.querySelector('.video-bg');
       if (!v) return;
@@ -635,7 +633,7 @@
       tryPlay();
     })();
 
-    // Sync audio with video loop and build animated volume control
+   
     (function setupAudio(){
       const video = document.querySelector('.video-bg');
       const audio = document.getElementById('bg-audio');
@@ -656,7 +654,7 @@
         const left = pct * track.clientWidth;
         fill.style.width = `${pct * 100}%`;
         knob.style.left = `${pct * 100}%`;
-        // Icon state
+      
         if (audio.muted || pct === 0){
           iconPath.setAttribute('d', 'M3 10v4h4l5 4V6l-5 4H3zm12.59-4L14 7.59 16.41 10 14 12.41 15.41 13.83 18.83 10.41 20.24 9l-1.41-1.41L15.41 6z');
           toggle.classList.remove('playing');
@@ -689,7 +687,7 @@
       }
 
       toggle.addEventListener('click', () => {
-        // Autoplay policy: attempt to play on first interaction
+        
         if (audio.paused) { audio.play().catch(()=>{}); }
         toggleMute();
       });
@@ -703,13 +701,13 @@
       window.addEventListener('touchmove', (e) => { if (isDragging) setVolumeFromClientX(e.touches[0].clientX); }, { passive: true });
       window.addEventListener('touchend', () => { isDragging = false; setTimeout(collapse, 500); }, { passive: true });
 
-      // Keep audio time in step with video when video loops
+    
       if (video){
         video.addEventListener('ended', () => {
           try { audio.currentTime = 0; } catch(_){}
           if (!audio.paused) { audio.play().catch(()=>{}); }
         });
-        // Start together when user interacts anywhere (autoplay restrictions)
+        
         const kick = () => {
           video.play().catch(()=>{});
           audio.play().then(()=>{ toggle.classList.add('playing'); }).catch(()=>{});
@@ -721,7 +719,7 @@
       updateVisuals(audio.volume);
     })();
 
-    // Adaptive glow color using sampled dominant video color
+   
     (function adaptiveGlow(){
       const video = document.querySelector('.video-bg');
       const title = document.querySelector('.title');
@@ -737,7 +735,7 @@
           ctx.drawImage(video, 0, 0, w, h);
           const data = ctx.getImageData(0, 0, w, h).data;
           let r=0,g=0,b=0,count=0;
-          for (let i=0;i<data.length;i+=16){ // örneklemeyi seyrek yap
+          for (let i=0;i<data.length;i+=16){
             r += data[i]; g += data[i+1]; b += data[i+2]; count++;
           }
           r = Math.round(r/count); g = Math.round(g/count); b = Math.round(b/count);
@@ -757,20 +755,20 @@
       });
     })();
 
-    // Block context menu and common DevTools shortcuts
+    
     document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
     document.addEventListener('keydown', function(e){
       const key = e.key.toLowerCase();
       const isMac = navigator.platform.toUpperCase().indexOf('MAC')>=0;
       const ctrlOrCmd = isMac ? e.metaKey : e.ctrlKey;
       if (
-        // F12
+       
         e.key === 'F12' ||
-        // Ctrl+Shift+I/J/C
+        
         (ctrlOrCmd && e.shiftKey && ['i','j','c'].includes(key)) ||
-        // Ctrl+U (view source), Ctrl+S (save)
+     
         (ctrlOrCmd && ['u','s'].includes(key)) ||
-        // Ctrl+Shift+K (Firefox web console)
+     
         (ctrlOrCmd && e.shiftKey && key === 'k')
       ) {
         e.preventDefault();
@@ -779,7 +777,7 @@
       }
     }, true);
 
-    // Discord button: copy username and show toast
+   
     (function copyDiscord(){
       const discordAnchor = document.querySelector('a[data-social="discord"]');
       if (!discordAnchor) return;
@@ -806,7 +804,7 @@
       });
     })();
 
-    // Profiles popover toggle (Craftrise / NameMC)
+    
     (function profilesMenu(){
       const li = document.getElementById('profilesMenu');
       const anchor = li ? li.querySelector('a[data-social="profiles"]') : null;
@@ -817,7 +815,7 @@
       function closePop(){ pop.classList.remove('show'); open = false; }
       anchor.addEventListener('click', (e) => { e.preventDefault(); open ? closePop() : openPop(); });
       document.addEventListener('click', (e) => { if (!li.contains(e.target)) closePop(); });
-      // Prevent tooltip overlap when open
+     
       li.addEventListener('mouseenter', ()=>{ if(open){ li.querySelector('.tooltip').style.opacity = 0; } });
       li.addEventListener('mouseleave', ()=>{ li.querySelector('.tooltip').style.opacity = ''; });
     })();
